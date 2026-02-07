@@ -1,0 +1,226 @@
+
+:root {
+  --bg: #000800;
+  --fg: #9fabb4;
+  --txt: #9fabb4;
+  --acnt-a: #0f1511;
+  --acnt-b: #091606;
+  --acnt-c: #242618;
+  --acnt-d: #333728;
+  --acnt-e: #6b662e;
+  --acnt-f: #ff9a2f;
+  --main: #384f3b;
+  --bd: #2e3336;
+  --clr: #00000000;
+}
+
+@font-face {
+  src: url(./../fonts/Nunito/Nunito-Regular.ttf);
+  font-family: mono;
+}
+
+@font-face {
+  src: url(./../fonts/WindSong/WindSong-Regular.ttf);
+  font-family: mono-b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: unset;
+  border: unset;
+  outline: unset;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  padding: 1em 4em;
+  font-family: mono;
+  background: radial-gradient(var(--bd), var(--main));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100%;
+  height: 6em;
+  box-shadow: var(--bd) 0 0 1em .2em;
+  background: linear-gradient(var(--acnt-a), var(--clr));
+  border-bottom: 1px solid var(--bd);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-h2 {
+  color: var(--txt);
+  font-family: mono-b;
+  letter-spacing: .2em;
+}
+
+.header-h2-span-a {
+  color: var(--acnt-f);
+  font-size: 1.4em;
+  margin: .2em;
+}
+
+.header-h2-span-b {
+  border-bottom: 2px solid var(--acnt-d);
+}
+
+.outer-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+  background: radial-gradient(var(--bg), var(--acnt-a));
+  border: 2px solid var(--bd);
+  box-shadow: var(--bd) 0 0 1em .2em, inset -.2em -.2em 5em var(--bd);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.jarfru-list {
+  width: 75%;
+  height: 90%;
+  background: var(--clr);
+  gap: 9em;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 1em 1em;
+  overflow: scroll;
+  padding: 7em 2em 2em 2em;
+  scrollbar-color: var(--bd) var(--bg);
+}
+
+.jarfru-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  min-height: 30vw;
+  background: radial-gradient(var(--bg), var(--clr));
+  padding: 1em 2em;
+  border-radius: 1em;
+  box-shadow: inset -.2em -.2em 1em var(--main);
+  border: 2px solid var(--main);
+  transition: .7s;
+}
+
+.list-item-area {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  font-family: mono;
+  letter-spacing: .1em;
+  font-size: 1em;
+  transition: 1s;
+  background: radial-gradient(var(--main), var(--bg));
+  cursor: pointer;
+}
+
+.list-item-area h3 {
+  padding: 2em;
+  border-radius: 1em;
+  color: var(--txt);
+}
+.list-item-area .h3-span {
+  border-radius: 1em;
+  padding: .2em;
+  margin: .2em;
+  font-family: mono-b;
+  font-size: 1.6em;
+}
+
+.list-item-area .list-item-image {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  transition: .7s;
+  padding: 1em;
+  background: url('./../images/photos/item-img.jpg') no-repeat bottom center scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  overflow: hidden;
+  transition: 1s;
+  box-shadow: var(--clr) 0 0 .2em .1em, inset -.2em -.2em 1em var(--main);
+}
+
+.list-item-area .list-item-image:hover {
+  transition: .5s;
+  box-shadow: var(--acnt-f) 0 0 .2em .1em, inset -.2em -.2em 1em var(--acnt-f);
+}
+
+.list-item-area .list-item-image:active {
+  transition: .5s;
+  box-shadow: var(--acnt-f) 0 0 .2em .1em;
+  background: var(--acnt-f);
+}
+
+.list-item-area .list-item-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: var(--acnt-f) 0 0 .2em .1em;
+  border: 1px solid var(--acnt-f);
+}
+
+@media (max-width: 1080px) {
+  body, html {
+    padding: unset;
+  }
+
+  header {
+    background: linear-gradient(var(--acnt-a), var(--acnt-a), var(--clr));
+  }
+
+  .outer-field {
+    padding: .2em;
+    width: 100%;
+    border-radius: unset;
+  }
+
+  .jarfru-list {
+    padding: 9em 1em 1em 1em;
+    width: 98%;
+    height: 98%;
+    gap: 5em;
+    border-radius: 0 0 2em 2em;
+  }
+
+  .jarfru-list li {
+    width: 100%;
+    min-height: 100vw;
+    border: 1px solid var(--main);
+  }
+
+  .list-item-area {
+    width: 70vw;
+    height: 70vw;
+    padding: .2em;
+  }
+}
+
